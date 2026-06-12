@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoE Ninja 中文化</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 220px;
+      background: #1a1a1e;
+      color: #d0d0d0;
+      font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 13px;
+    }
+    .header {
+      background: #0f0f12;
+      padding: 12px 14px 10px;
+      border-bottom: 1px solid #333;
+    }
+    .header h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e0c070;
+    }
+    .header p {
+      font-size: 11px;
+      color: #777;
+      margin-top: 2px;
+    }
+    .section {
+      padding: 12px 14px;
+    }
+    .section + .section {
+      border-top: 1px solid #2a2a30;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    select {
+      width: 100%;
+      background: #0f0f12;
+      border: 1px solid #444;
+      color: #d0d0d0;
+      padding: 6px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      cursor: pointer;
+      outline: none;
+    }
+    select:focus { border-color: #e0c070; }
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+    }
+    .stat span:last-child {
+      color: #e0c070;
+      font-weight: 600;
+    }
+    .footer {
+      padding: 10px 14px;
+      border-top: 1px solid #2a2a30;
+    }
+    .footer a {
+      color: #8888cc;
+      text-decoration: none;
+      font-size: 11px;
+    }
+    .footer a:hover { color: #e0c070; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>PoE Ninja 中文化</h1>
+    <p>Path of Exile · poe.ninja</p>
+  </div>
+
+  <div class="section">
+    <label>显示语言</label>
+    <select id="langSelect">
+      <option value="zh-CN">简体中文</option>
+      <option value="zh-TW">繁體中文</option>
+      <option value="off">关闭翻译</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <label>翻译统计</label>
+    <div class="stat">
+      <span>已翻译词条</span>
+      <span id="countDisplay">—</span>
+    </div>
+    <div class="stat">
+      <span>词典总词条</span>
+      <span id="dictSize">—</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://github.com/" target="_blank">贡献词典 / 反馈问题</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

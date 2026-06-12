@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "PoE Ninja 中文化",
+  "version": "0.1.0",
+  "description": "将 poe.ninja 页面内容翻译为简体/繁体中文，方便中文玩家查阅构筑与物价。",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["https://poe.ninja/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://poe.ninja/*"],
+      "js": ["dictionary.js", "observer.js", "ui.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
